@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mth9821"
+version = "0.1.0"
+description = "Team library for MTH9821 (Numerical Methods for Finance) homework"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+    "openpyxl",
+    "matplotlib",
+    "jupyter",
+    "nbconvert",
+    "ipykernel",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["mth9821"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
